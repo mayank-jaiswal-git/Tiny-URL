@@ -41,7 +41,7 @@ public class UrlShortnerController {
 	public ResponseEntity<?> redirect(@PathVariable String shortCode) {
 	    Optional<UrlMapping> mapping = urlShortnerService.getOriginalUrl(shortCode);
 	    if (mapping.isEmpty()) {
-	        return new ResponseEntity<String>("Short Code is Invalid",HttpStatus.NOT_FOUND);
+	        return new ResponseEntity<String>("Short Code is invalid",HttpStatus.NOT_FOUND);
 	    }
 
 	    return ResponseEntity.ok(Map.of("redirectTo", mapping.get().getLongUrl()));
