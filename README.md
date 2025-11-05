@@ -1,4 +1,4 @@
-# TinyURL
+# Tiny-URL
 
 TinyURL is a Spring Boot application that provides a simple URL shortening service with statistics tracking.
 
